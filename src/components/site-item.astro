@@ -21,8 +21,8 @@ const data = await getMetaTags(url);
       data.ogImage ? (
         <Image
           class="w-28 min-w-28 h-16 self-center rounded"
-          width={120}
-          height={100}
+          width={300}
+          height={150}
           alt={data.title! + " landing image"}
           src={data.ogImage!}
         />
