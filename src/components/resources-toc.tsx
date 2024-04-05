@@ -15,7 +15,7 @@ export const Toc = () => {
           <>
             <a
               href={"#" + item[0].replace(" ", "-")}
-              className="hover:cursor-pointer hover:underline"
+              className="md:ml-3 hover:cursor-pointer hover:underline"
             >
               {item[0]}
             </a>
