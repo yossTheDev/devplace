@@ -18,13 +18,17 @@ type Props = {
   class="flex w-full gap-2 rounded-xl p-2 transition-all delay-75 hover:bg-neutral-400/20"
 >
   <div class="relative flex">
-    <Image
-      class="max-h-16 min-w-24 self-center rounded"
-      width={120}
-      height={100}
-      alt={data.title! + " landing image"}
-      src={data.ogImage!}
-    />
+    {
+      data.ogImage && (
+        <Image
+          class="max-h-16 min-w-24 w-24 h-16 self-center rounded"
+          width={120}
+          height={100}
+          alt={data.title! + " landing image"}
+          src={data.ogImage!}
+        />
+      )
+    }
 
     {
       data.favicon && (
