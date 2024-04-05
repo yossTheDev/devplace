@@ -41,9 +41,7 @@ import cloud from "../../resources/cloud.json";
 
   <section class="flex h-full mb-2">
     <!-- Resources -->
-    <div class="flex md:w-4/5 w-full px-4 md:px-6 flex-col gap-4">
-      <SiteSection title="Cloud" data={cloud} />
-    </div>
+    <div class="flex md:w-4/5 w-full px-4 md:px-6 flex-col gap-4"></div>
 
     <!-- TOC -->
     <aside
@@ -56,12 +54,31 @@ import cloud from "../../resources/cloud.json";
   <style>
     .hero:is(.dark *) {
       background: url("../assets/img/ssspiral2.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
     }
 
     .hero {
       background: url("../assets/img/ssspiral3.svg");
       background-repeat: no-repeat;
       background-size: cover;
+    }
+
+    @media (min-width: 768px) {
+      .hero:is(.dark *) {
+        background: url("../assets/img/ssspiral2.svg");
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-position: 50%;
+      }
+
+      .hero {
+        background: url("../assets/img/ssspiral3.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-size: 50%;
+        background-position: 50%;
+      }
     }
   </style>
 </MainLayout>
