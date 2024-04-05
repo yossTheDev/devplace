@@ -14,5 +14,14 @@
     "https://azure.microsoft.com/",
     "https://vercel.com/",
     "https://render.com/"
+  ],
+  "BaaS": [
+    "https://www.back4app.com/",
+    "https://backendless.com/",
+    "https://darklang.com/",
+    "https://nhost.io/",
+    "https://paraio.com/",
+    "https://supabase.com/",
+    "https://appwrite.io/"
   ]
 }
