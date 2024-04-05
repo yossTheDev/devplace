@@ -45,15 +45,15 @@ import cloud from "../../resources/cloud.json";
     <!-- Resources -->
     <div class="flex w-full px-4 md:px-6 gap-4">
       <SiteSection title="Cloud" data={cloud} />
-
-      <!-- TOC -->
-      <aside
-        class="fixed dark:bg-secondary/30 bg-secondary/60 h-fit p-4 rounded-xl top-20 w-1/5 z-30 -ml-2 hidden shrink-0 md:sticky md:block"
-      >
-        <p class="text-center font-bold">Index</p>
-        <Toc />
-      </aside>
     </div>
+
+    <!-- TOC -->
+    <aside
+      class="fixed mr-4 dark:bg-secondary/30 bg-secondary/60 h-fit p-4 rounded-xl top-20 w-1/5 z-30 -ml-2 hidden shrink-0 md:sticky md:block"
+    >
+      <p class="text-center font-bold">Index</p>
+      <Toc />
+    </aside>
 
     <style>
       .hero:is(.dark *) {
