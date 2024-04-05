@@ -1,16 +1,14 @@
 ---
-import { getMetaTags } from "../util/metadata";
 import { Image } from "astro:assets";
-
-const { url } = Astro.props;
-
-const data = await getMetaTags(url);
-
-console.log(data);
+import { getMetaTags } from "../util/metadata";
 
 type Props = {
   url: string;
 };
+
+const { url } = Astro.props;
+
+const data = await getMetaTags(url);
 ---
 
 <a
