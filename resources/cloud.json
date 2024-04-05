@@ -1,4 +1,12 @@
 {
+  "BaaS": [
+    "https://www.back4app.com/",
+    "https://backendless.com/",
+    "https://nhost.io/",
+    "https://paraio.com/",
+    "https://supabase.com/",
+    "https://appwrite.io/"
+  ],
   "Cloud Providers": [
     "https://aws.amazon.com/",
     "https://cloud.google.com/",
@@ -7,6 +15,20 @@
     "https://www.oracle.com/cloud/",
     "https://www.cloudflare.com/"
   ],
+  "DBaaS": [
+    "https://neon.tech/",
+    "https://www.mongodb.com/",
+    "https://planetscale.com/",
+    "https://turso.tech/"
+  ],
+  "PaaS": [
+    "https://www.fl0.com/",
+    "https://cyclic.sh/",
+    "https://qoddi.com/",
+    "https://www.deta.sh/",
+    "https://railway.app/",
+    "https://glitch.com/"
+  ],
   "Web Hosting": [
     "https://www.hostinger.com/",
     "https://www.digitalocean.com/",
@@ -14,14 +36,5 @@
     "https://azure.microsoft.com/",
     "https://vercel.com/",
     "https://render.com/"
-  ],
-  "BaaS": [
-    "https://www.back4app.com/",
-    "https://backendless.com/",
-    "https://darklang.com/",
-    "https://nhost.io/",
-    "https://paraio.com/",
-    "https://supabase.com/",
-    "https://appwrite.io/"
   ]
 }
