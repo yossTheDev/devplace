@@ -1,0 +1,8 @@
+{
+  "Forms": [
+    "https://getform.io/",
+    "https://tally.so/",
+    "https://form2channel.com/"
+  ],
+  "Templates": ["https://astro.build/themes", "https://astro-nomy.vercel.app/"]
+}
