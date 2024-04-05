@@ -1,5 +1,4 @@
 import cloud from "../../resources/cloud.json";
-import { ScrollArea } from "./ui/scroll-area";
 
 export const Toc = () => {
   return (
@@ -15,7 +14,10 @@ export const Toc = () => {
           <>
             <a
               href={"#" + item[0].replace(" ", "-")}
-              className="md:ml-3 hover:cursor-pointer hover:underline"
+              className={`toc-item md:ml-3 hover:cursor-pointer hover:underline ${item[0].replace(
+                " ",
+                "-"
+              )}`}
             >
               {item[0]}
             </a>

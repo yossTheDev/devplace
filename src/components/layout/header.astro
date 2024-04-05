@@ -11,8 +11,9 @@ const { className } = Astro.props;
 ---
 
 <header
+  id="header"
   class={cn(
-    "flex items-center h-16 md:h-18 z-50 sticky top-0 bg-background",
+    "flex items-center h-16 md:h-18 z-50 sticky top-0 bg-background border-transparent border-b",
     className
   )}
 >
@@ -75,4 +76,41 @@ const { className } = Astro.props;
 
     <slot name="right-header" />
   </div>
+
+  <script>
+    const header = document.getElementById("header");
+
+    /* Auto Hide Scroll Bar */
+    window?.addEventListener("scroll", () => {
+      if (window.scrollY > 150) {
+        header?.classList.remove("border-transparent");
+      } else {
+        header?.classList.add("border-transparent");
+      }
+    });
+
+    /* Update Toc Items */
+    window?.addEventListener("scroll", () => {
+      let current: string | null;
+
+      const sections = document.querySelectorAll(
+        ".items-section"
+      ) as NodeListOf<HTMLElement>;
+      const tocItems = document.querySelectorAll(".toc-item");
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        if (window.scrollY + 200 >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      tocItems.forEach((li) => {
+        li.classList.remove("underline");
+        if (current && li.classList.contains(current)) {
+          li.classList.add("underline");
+        }
+      });
+    });
+  </script>
 </header>
