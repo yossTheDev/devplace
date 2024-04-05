@@ -10,7 +10,7 @@ export const Toc = () => {
       >
         Cloud
       </a>
-      <ScrollArea>
+      <div className="flex flex-col">
         {Object.entries(cloud).map((item, index) => (
           <>
             <a
@@ -21,7 +21,7 @@ export const Toc = () => {
             </a>
           </>
         ))}
-      </ScrollArea>
+      </div>
     </div>
   );
 };
