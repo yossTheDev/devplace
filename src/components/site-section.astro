@@ -1,0 +1,24 @@
+---
+import SiteGroup from "./site-group.astro";
+
+type Props = {
+  title: string;
+  data: any;
+};
+
+const { title, data } = Astro.props;
+---
+
+<div class="flex flex-col gap-2">
+  <p id={title.replace(" ", "-")} class="text-3xl font-bold">
+    {title}
+  </p>
+
+  {
+    Object.entries(data).map((item, index) => (
+      <>
+        <SiteGroup data={item[1] as string[]} label={item[0]} />
+      </>
+    ))
+  }
+</div>

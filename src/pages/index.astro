@@ -1,0 +1,67 @@
+---
+import ResourcesCounter from "@/components/resources-counter.astro";
+import { Toc } from "@/components/resources-toc";
+import SiteSection from "@/components/site-section.astro";
+import MainLayout from "@/layouts/main-layout.astro";
+
+import cloud from "../../resources/cloud.json";
+---
+
+<MainLayout mainClass="h-full" title="DevPlace - Free Developer Resources">
+  <section
+    class="hero flex flex-col md:h-screen h-[80vh] justify-center w-full items-center pb-12 pt-16 lg:py-28 px-8 text-center"
+  >
+    <h1 class="md:text-6xl text-5xl font-bold">[DevPlace]</h1>
+    <p class="md:text-xl md:mx-32 text-xs text-secondary-foreground">
+      Your trusted hub for developer resources. Discover tutorials,
+      documentation, code libraries, tools, and developer communities, all in
+      one place.
+    </p>
+    <ResourcesCounter />
+
+    <div
+      class="bg-blue-500 shadow-xl dark:shadow-blue-600 shadow-blue-300 flex ring-2 mx-auto mt-12 px-4 animate-bounce ring-blue-300 text-white font-bold text-sm justify-center items-center w-fit rounded-full p-2"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-arrow-down"
+        ><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg
+      >
+      <p>Let´s explore</p>
+    </div>
+  </section>
+
+  <section class="flex h-full">
+    <!-- Resources -->
+    <div class="flex md:w-4/5 w-full px-8 md:px-6 flex-col gap-4">
+      <SiteSection title="Cloud" data={cloud} />
+    </div>
+
+    <!-- TOC -->
+    <aside
+      class="fixed top-20 w-1/5 z-30 -ml-2 hidden h-full shrink-0 md:sticky md:block"
+    >
+      <Toc />
+    </aside>
+  </section>
+
+  <style>
+    .hero:is(.dark *) {
+      background: url("../assets/img/ssspiral2.svg");
+    }
+
+    .hero {
+      background: url("../assets/img/ssspiral3.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+</MainLayout>

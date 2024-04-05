@@ -1,0 +1,15 @@
+---
+import SiteItem from "./site-item.astro";
+
+type Props = {
+  label: string;
+  data: string[];
+};
+
+const { label, data } = Astro.props;
+---
+
+<div class="flex flex-col gap-2">
+  <p id={label.replace(" ", "-")} class="text-xl font-bold">{label}</p>
+  {data.map((item) => <SiteItem url={item} />)}
+</div>
