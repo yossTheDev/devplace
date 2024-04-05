@@ -2,7 +2,9 @@
   "Forms": [
     "https://getform.io/",
     "https://tally.so/",
-    "https://form2channel.com/"
+    "https://form2channel.com/",
+    "https://formcake.com/",
+    "https://pageclip.co/"
   ],
   "Templates": ["https://astro.build/themes", "https://astro-nomy.vercel.app/"]
 }

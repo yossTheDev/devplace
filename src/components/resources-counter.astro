@@ -1,9 +1,11 @@
 ---
 import cloud from "../../resources/cloud.json";
+import web from "../../resources/web.json";
 
 let count = 0;
 
 Object.entries(cloud).map((item) => (count += item[1].length));
+Object.entries(web).map((item) => (count += item[1].length));
 ---
 
 <div
