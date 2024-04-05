@@ -57,7 +57,7 @@ const data = await getMetaTags(url);
           height={50}
           alt={data.title! + " favicon image"}
           src={
-            data.favicon.startsWith("./")
+            data.favicon.startsWith("/")
               ? `${url + data.favicon}`
               : data.favicon
           }
