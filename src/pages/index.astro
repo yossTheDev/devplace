@@ -5,6 +5,7 @@ import SiteSection from "@/components/site-section.astro";
 import MainLayout from "@/layouts/main-layout.astro";
 
 import cloud from "../../resources/cloud.json";
+import mock from "../../resources/mock.json";
 ---
 
 <MainLayout mainClass="h-full" title="DevPlace - Free Developer Resources">
@@ -43,8 +44,8 @@ import cloud from "../../resources/cloud.json";
   <!-- Items -->
   <section class="flex h-full mb-2">
     <!-- Resources -->
-    <div class="flex w-full px-4 md:px-6 gap-4">
-      <SiteSection title="Cloud" data={cloud} />
+    <div class="flex flex-col w-full px-4 md:px-6 gap-4">
+      <SiteSection title="Cloud" data={mock} />
     </div>
 
     <!-- TOC -->
