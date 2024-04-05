@@ -51,7 +51,7 @@ export function SheetMobileNav({}: SheetMobileProps) {
 
           <span className="font-bold">{siteConfig.name}</span>
         </a>
-        <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-10">
+        <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-2">
           <div className="mt-2 mb-20">
             <div className="flex flex-col space-y-3">
               <Toc></Toc>
