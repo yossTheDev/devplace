@@ -44,46 +44,46 @@ import cloud from "../../resources/cloud.json";
   <section class="flex h-full mb-2">
     <!-- Resources -->
     <div class="flex md:w-4/5 w-full px-4 md:px-6 flex-col gap-4">
-      <!-- SiteSection title="Cloud" data={cloud} -->
+      <SiteSection title="Cloud" data={cloud} />
+
+      <!-- TOC -->
+      <aside
+        class="fixed dark:bg-secondary/30 bg-secondary/60 p-4 rounded-xl top-20 w-1/5 z-30 -ml-2 hidden h-full shrink-0 md:sticky md:block"
+      >
+        <p class="text-center font-bold">Index</p>
+        <Toc />
+      </aside>
     </div>
 
-    <!-- TOC -->
-    <aside
-      class="fixed dark:bg-secondary/30 bg-secondary/60 p-4 rounded-xl top-20 w-1/5 z-30 -ml-2 hidden h-full shrink-0 md:sticky md:block"
-    >
-      <p class="text-center font-bold">Index</p>
-      <Toc />
-    </aside>
-  </section>
-
-  <style>
-    .hero:is(.dark *) {
-      background: url("../assets/img/ssspiral2.svg");
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-
-    .hero {
-      background: url("../assets/img/ssspiral3.svg");
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-
-    @media (min-width: 768px) {
+    <style>
       .hero:is(.dark *) {
         background: url("../assets/img/ssspiral2.svg");
+        background-size: cover;
         background-repeat: no-repeat;
-        background-size: 50%;
-        background-position: 50%;
       }
 
       .hero {
         background: url("../assets/img/ssspiral3.svg");
         background-repeat: no-repeat;
         background-size: cover;
-        background-size: 50%;
-        background-position: 50%;
       }
-    }
-  </style>
+
+      @media (min-width: 768px) {
+        .hero:is(.dark *) {
+          background: url("../assets/img/ssspiral2.svg");
+          background-repeat: no-repeat;
+          background-size: 50%;
+          background-position: 50%;
+        }
+
+        .hero {
+          background: url("../assets/img/ssspiral3.svg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-size: 50%;
+          background-position: 50%;
+        }
+      }
+    </style>
+  </section>
 </MainLayout>
