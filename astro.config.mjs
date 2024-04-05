@@ -9,6 +9,9 @@ import { defineConfig } from "astro/config";
 // https://astro.build/config
 export default defineConfig({
   site: "https://astro-nomy.vercel.app",
+  image: {
+    remotePatterns: [{ protocol: "https" }],
+  },
   integrations: [
     mdx({
       syntaxHighlight: "shiki",
