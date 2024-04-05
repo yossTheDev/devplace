@@ -1,11 +1,4 @@
 {
-  "Forms": [
-    "https://getform.io/",
-    "https://tally.so/",
-    "https://form2channel.com/",
-    "https://pageclip.co/"
-  ],
-  "Templates": ["https://astro.build/themes", "https://astro-nomy.vercel.app/"],
   "CMS": [
     "https://www.contentful.com/",
     "https://keystonejs.com/",
@@ -14,6 +7,23 @@
     "https://wordpress.org/",
     "https://www.cosmicjs.com/",
     "https://tina.io/",
-    ""
+    "https://directus.io/"
+  ],
+  "CSS": [
+    "https://materializecss.com/",
+    "https://tailwindcss.com/",
+    "https://unocss.dev/"
+  ],
+  "Forms": [
+    "https://getform.io/",
+    "https://tally.so/",
+    "https://form2channel.com/",
+    "https://pageclip.co/"
+  ],
+  "Templates": ["https://astro.build/themes", "https://astro-nomy.vercel.app/"],
+  "UI": [
+    "https://uiverse.io/",
+    "https://daisyui.com/",
+    "https://ui.shadcn.com/"
   ]
 }
