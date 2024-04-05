@@ -3,7 +3,7 @@ import type { SiteConfig } from "@/types";
 export const siteConfig: SiteConfig = {
   name: "DevPlace",
   description:
-    "An modern example app built using Astro v4 & shadcn/ui. Inspired by shadcn/taxonomy.",
+    "Your trusted hub for free developer resources. Discover tutorials, documentation, code libraries, tools, and developer communities, all in one place.",
   url: "https://devplace.pages.dev",
   ogImage: "https://devplace.pages.dev/og.jpg",
   links: {

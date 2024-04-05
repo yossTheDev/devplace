@@ -8,14 +8,15 @@ import cloud from "../../resources/cloud.json";
 ---
 
 <MainLayout mainClass="h-full" title="DevPlace - Free Developer Resources">
+  <!-- Hero -->
   <section
     class="hero flex flex-col h-screen justify-center w-full items-center pb-12 pt-16 lg:py-28 px-8 text-center"
   >
     <h1 class="md:text-6xl text-5xl font-bold">[DevPlace]</h1>
     <p class="md:text-xl md:mx-32 text-xs text-secondary-foreground">
-      Your trusted hub for developer resources. Discover tutorials,
-      documentation, code libraries, tools, and developer communities, all in
-      one place.
+      Your trusted hub for <span class="font-bold">Free</span> developer resources.
+      Discover tutorials, documentation, code libraries, tools, and developer communities,
+      all in one place.
     </p>
     <ResourcesCounter />
 
@@ -39,6 +40,7 @@ import cloud from "../../resources/cloud.json";
     </div>
   </section>
 
+  <!-- Items -->
   <section class="flex h-full mb-2">
     <!-- Resources -->
     <div class="flex md:w-4/5 w-full px-4 md:px-6 flex-col gap-4">
