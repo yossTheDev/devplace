@@ -1,10 +1,11 @@
 {
-  "Cloud Hosting": [
+  "Cloud Providers": [
     "https://aws.amazon.com/",
     "https://cloud.google.com/",
     "https://www.ibm.com/cloud/",
     "https://azure.microsoft.com/",
-    "https://www.oracle.com/cloud/"
+    "https://www.oracle.com/cloud/",
+    "https://www.cloudflare.com/"
   ],
   "Web Hosting": [
     "https://www.hostinger.com/",

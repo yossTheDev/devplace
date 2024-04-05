@@ -58,7 +58,11 @@ type Props = {
           width={50}
           height={50}
           alt={data.title! + " favicon image"}
-          src={data.favicon!}
+          src={
+            data.favicon.startsWith("./")
+              ? `${url + data.favicon}`
+              : data.favicon
+          }
         />
       )
     }
