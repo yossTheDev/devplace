@@ -3,8 +3,17 @@
     "https://getform.io/",
     "https://tally.so/",
     "https://form2channel.com/",
-    "https://formcake.com/",
     "https://pageclip.co/"
   ],
-  "Templates": ["https://astro.build/themes", "https://astro-nomy.vercel.app/"]
+  "Templates": ["https://astro.build/themes", "https://astro-nomy.vercel.app/"],
+  "CMS": [
+    "https://www.contentful.com/",
+    "https://keystonejs.com/",
+    "https://www.sanity.io/",
+    "https://strapi.io/",
+    "https://wordpress.org/",
+    "https://www.cosmicjs.com/",
+    "https://tina.io/",
+    ""
+  ]
 }

@@ -24,7 +24,15 @@ export const Toc = () => {
             </a>
           </>
         ))}
+      </div>
 
+      <a
+        href={"#Cloud"}
+        className="font-bold hover:cursor-pointer hover:underline"
+      >
+        Web
+      </a>
+      <div className="flex flex-col">
         {Object.entries(web).map((item, index) => (
           <>
             <a
