@@ -1,102 +1,18 @@
-# Astronomy
+<h1 align="center">DevPlace</h1>
 
-An open source application built using the latest features in Astro v4 with shadcn/ui.
+<p align="center">
+🧑‍💻 Your trusted hub for Free developer resources. Discover tutorials, documentation, code libraries, tools, and developer communities, all in one place.
+</p>
 
-![blog](public/og.jpg)
+![blog](docs/screen.png)
 
-> **Warning**
-> This app is a work in progress. I'm building this in public. You can follow the progress on Twitter [@miickasmt](https://twitter.com/miickasmt).
-> See the roadmap below.
-
-## About this project
-
-This project as an experiment to see how a modern app (with features like authentication, subscriptions, API routes, Markdown, Content Collections ...etc) would work in Astro v4 and shadcn/ui.
-
-> **Note**
-> I would like to inform you that for the time being, my example app built with Astro.js is still under development and **cannot yet be considered a starter template**.
-
-## Project Structure
-
-```
-├── public/
-│   └── fonts/
-├── src/
-│   ├── components/
-│   ├── config/
-│   ├── content/
-│   ├── hooks/
-│   ├── icons/
-│   ├── layouts/
-│   ├── lib/
-│   ├── pages/
-│   ├── styles/
-│   └── types/
-├── astro.config.mjs
-├── README.md
-├── package.json
-├── tailwind.config.cjs
-└── tsconfig.json
-```
-
-## Features
-
-- Config files
-- Views Transitions
-- Routing and Layouts
-- React components & hooks
-- UI Components built using **shadcn/ui**
-- Documentation and blog using **MDX** and **Content Collections**
-- Styled using **Tailwind CSS**
-- Validations using **Zod**
-- Written in **TypeScript**
-- 100/100 Lighthouse performance
-- Minimal styling (make it your own!)
-- RSS Feed support
-
-_Not implemented yet :_
-
-- Sitemap support
-- Data Fetching
-- SEO component
-- API Endpoint
-- Subscriptions using **Lemon Squeezy** ?
-
-## Roadmap
-
-- [x] ~Dark mode~
-- [x] ~Add Markdown & MDX support~
-- [x] ~Sheet mobile nav~
-- [x] ~Build **changelog pages**~
-- [x] ~Build **waitlist with React Hook Form**~
-- [x] ~Build **newsletter with Simple Form**~
-- [ ] Build **blog with Astro DB** (work on it)
-- [ ] Build **ecommerce pages** (work on it)
-- [ ] Build **dashboard pages**
-- [ ] Build **animes pages** (graphql)
-- [ ] Add search support for blog
-- [ ] Add OG image for blog and others
-- [ ] Add SEO component & metadata
-- [ ] Subscriptions using Stripe
-
-## Running Locally
-
-1. Install dependencies using pnpm:
-
-```sh
-pnpm install
-```
-
-2. Start the development server:
-
-```sh
-pnpm run dev
-```
-
-## Credit
-
-This theme is based off of the example app [Taxonomy](https://tx.shadcn.com/) of shadcn.
+<div align="center">
+<img src="https://img.shields.io/badge/Astro-BC52EE?logo=astro&logoColor=fff&style=for-the-badge" alt="Astro Badge">
+<img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=for-the-badge" alt="React Badge">
+<img src="https://img.shields.io/badge/shadcn%2Fui-000?logo=shadcnui&logoColor=fff&style=for-the-badge" alt="shadcn/ui Badge">
+<img src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4?logo=tailwindcss&logoColor=fff&style=for-the-badge" alt="Tailwind CSS Badge">
+</div>
 
 ## License
 
-Licensed under the [MIT license](https://github.com/mickasmt/astro-nomy/blob/main/LICENSE.md).
-# devplace
+Licensed under the [MIT license](https://github.com/yossTheDev/devplace/blob/main/LICENSE.md).
