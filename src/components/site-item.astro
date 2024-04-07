@@ -26,7 +26,7 @@ try {
   };
 }
 
-let _url = url.replace("https://", "");
+let _url = url.replace("https://", "").replace("http://", "");
 if (_url.endsWith("/")) _url = _url.substring(0, _url.length - 1);
 ---
 
