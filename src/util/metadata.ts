@@ -88,8 +88,6 @@ export const getMetaTags = async (url: string): Promise<MetaData> => {
 
     metaData.favicon = favicon;
 
-    console.log(metaData)
-
     return metaData;
 
 };
