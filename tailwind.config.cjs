@@ -1,4 +1,5 @@
 const { fontFamily } = require("tailwindcss/defaultTheme");
+import animations from '@midudev/tailwind-animations';
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -82,5 +83,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography"), animations],
 };
