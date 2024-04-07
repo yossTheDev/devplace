@@ -20,6 +20,14 @@
     "https://form2channel.com/",
     "https://pageclip.co/"
   ],
+  "React JS": [
+    "https://reactjs.org/",
+    "https://nextjs.org/",
+    "https://remix.run/",
+    "https://novajs.co",
+    "https://github.com/dlcastillop/hook-crafter"
+  ],
+  "Vue JS": ["https://vuejs.org/", "https://nuxtjs.org/"],
   "Templates": ["https://astro.build/themes", "https://astro-nomy.vercel.app/"],
   "UI": [
     "https://uiverse.io/",
