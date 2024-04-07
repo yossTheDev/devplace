@@ -27,12 +27,12 @@
     "https://novajs.co",
     "https://github.com/dlcastillop/hook-crafter"
   ],
-  "Vue JS": ["https://vuejs.org/", "https://nuxtjs.org/"],
   "Templates": ["https://astro.build/themes", "https://astro-nomy.vercel.app/"],
   "UI": [
     "https://uiverse.io/",
     "https://daisyui.com/",
     "https://ui.shadcn.com/",
     "https://tailwindcomponents.com/"
-  ]
+  ],
+  "Vue JS": ["https://vuejs.org/", "https://nuxtjs.org/"]
 }
