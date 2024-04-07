@@ -15,16 +15,27 @@ import mock from "../../mock.json";
   <section
     class="hero animate-fade-in-up flex flex-col h-screen justify-center w-full items-center pb-12 pt-16 lg:py-28 px-8 text-center"
   >
-    <h1 class="md:text-6xl text-5xl font-bold">[DevPlace]</h1>
-    <p class="md:text-xl md:mx-32 text-xs text-secondary-foreground">
+    <h1
+      class="md:text-6xl text-5xl font-bold bg-gradient-to-b from-neutral-700 to-neutral-800 dark:from-neutral-300 dark:to-neutral-500 bg-clip-text text-transparent"
+    >
+      [DevPlace]
+    </h1>
+    <p class="md:text-xs md:w-80 text-neutral-400 text-xs">
       Your trusted hub for <span class="font-bold">Free</span> developer resources.
       Discover tutorials, documentation, code libraries, tools, and developer communities,
       all in one place.
     </p>
+
     <ResourcesCounter />
+    <a
+      href="https://github.com/yossTheDev/devplace?tab=readme-ov-file#-how-to-contribute"
+      target="_blank"
+      class="flex ring-2 mx-auto mt-3 px-4 hover:bg-blue-500 transition-all text-neutral-800 hover:text-white dark:text-white font-bold text-sm justify-center items-center w-fit rounded-full p-2"
+      >Submit</a
+    >
 
     <div
-      class="bg-blue-500 shadow-xl dark:shadow-blue-600 shadow-blue-300 flex ring-2 mx-auto mt-12 px-4 animate-bounce ring-blue-300 text-white font-bold text-sm justify-center items-center w-fit rounded-full p-2"
+      class="bg-blue-500 hidden animate-bouncing animate-iteration-count-infinite shadow-xl dark:shadow-[#303552] shadow-blue-300 flex ring-2 mx-auto mt-12 px-4 animate-bounce ring-blue-300 text-white font-bold text-sm justify-center items-center w-fit rounded-full p-2"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +58,7 @@ import mock from "../../mock.json";
   <section class="flex h-full mb-2">
     <!-- Resources -->
     <div class="flex flex-col w-full md:px-4 gap-4">
-      <SiteSection title="Cloud" data={mock} />
+      <!-- SiteSection title="Cloud" data={mock} --/>
 
       <!-- SiteSection title="Cloud" data={cloud} -->
       <!--- SiteSection title="Web" data={web} -->
