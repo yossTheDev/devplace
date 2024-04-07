@@ -9,6 +9,7 @@ import { navMenuConfig } from "@/config/nav-menu";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { siteConfig } from "@/config/site";
 import { Icon } from "astro-icon/components";
+import { SheetToc } from "@/components/sheet-toc";
 // import { marketingConfig } from "@/config/marketing";
 // import MainNav from "@/components/layout/main-nav.astro";
 
@@ -16,13 +17,14 @@ type Props = {
   title: string;
   description?: string;
   mainClass?: string;
+  items?: any;
 };
 
-const { title, description, mainClass } = Astro.props;
+const { title, description, mainClass, items } = Astro.props;
 ---
 
 <BaseLayout title={title} description={description}>
-  <Header className="">
+  <Header className={items ? "h-28" : "h-16"}>
     <!-- if using only normals links  -->
     <!-- <MainNav items={marketingConfig.mainNav} slot="left-header" />
     <SheetMobileNav
@@ -37,11 +39,13 @@ const { title, description, mainClass } = Astro.props;
       mainNavItems={[...navMenuConfig.links]}
       sidebarNavItems={[
         ...navMenuConfig.pagesNav,
-        ...navMenuConfig.examplesNav,
+        // ...navMenuConfig.examplesNav,
       ]}
       slot="mobile-nav-header"
       client:load
     />
+    <!-- Sheet Mobile TOC -->
+    {items && <SheetToc client:load slot="navigation-toc" items={items} />}
 
     <div class="flex items-center gap-x-4" slot="right-header">
       <a

@@ -3,50 +3,23 @@ import type { NavMenuConfig } from "@/types";
 export const navMenuConfig: NavMenuConfig = {
   pagesNav: [
     {
-      title: "Pages",
+      title: "Categories",
       items: [
         {
-          title: "Landing",
-          href: "/landing",
-          description: "A landing page template with differents sections.",
-          image: "/images/examples/landing.jpg",
+          title: "Web",
+          href: "/web",
+          description: "Free Resources for Web Developers. Icons, Templates, Design Systems and much more.",
         },
         {
-          title: "Changelog",
-          href: "/releases",
-          description: "A reproduction of Starlog template with Tailwind CSS.",
-          image: "/images/examples/changelog.jpg",
+          title: "Cloud",
+          href: "/cloud",
+          description: "Free Cloud Resources. Hosting, BaaS, Domains and More",
         },
-        {
-          title: "Waitlist",
-          href: "/waitlist",
-          description:
-            "A waitlist form using Astro DB, React Hook Form & Sonner. Static page.",
-          image: "/images/examples/waitlist.jpg",
-          forceReload: true,
-        },
-        {
-          title: "Pricing",
-          href: "/pricing",
-          description: "Pricing cards, FAQs and more content with price.",
-          image: "/images/examples/pricing.jpg",
-        },
-        {
-          title: "About",
-          href: "/about",
-          description: "A simple page with a masonry gallery and little text.",
-          image: "/images/examples/about.jpg",
-        },
-        {
-          title: "Newsletter",
-          href: "/newsletter",
-          description:
-            "A newsletter form using Astro DB & Simple Stack Form. Counter display!",
-          image: "/images/examples/newsletter.jpg",
-        },
+
       ],
     },
   ],
+
   examplesNav: [
     {
       title: "Examples",
@@ -97,6 +70,7 @@ export const navMenuConfig: NavMenuConfig = {
       ],
     },
   ],
+
   links: [
     // {
     //   title: "Example",

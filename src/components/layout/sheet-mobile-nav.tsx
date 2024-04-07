@@ -1,6 +1,5 @@
 import * as React from "react";
 
-import { Toc } from "@/components/resources-toc";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -13,7 +12,16 @@ interface SheetMobileProps {
   sidebarNavItems?: SidebarNavItem[];
 }
 
-export function SheetMobileNav({}: SheetMobileProps) {
+export function SheetMobileNav({
+  mainNavItems,
+  sidebarNavItems,
+}: SheetMobileProps) {
+  const mergedMainNavItems = mainNavItems?.filter(
+    (item, index, self) =>
+      index ===
+      self.findIndex((t) => t.href === item.href && t.title === item.title)
+  );
+
   const [open, setOpen] = React.useState(false);
 
   return (
@@ -53,9 +61,60 @@ export function SheetMobileNav({}: SheetMobileProps) {
         </a>
         <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-2">
           <div className="mt-2 mb-20">
-            <div className="flex flex-col space-y-3">
-              <Toc></Toc>
-            </div>
+            {mainNavItems?.length ? (
+              <div className="flex flex-col space-y-3">
+                {mergedMainNavItems?.map(
+                  (item) =>
+                    item.href && (
+                      <a
+                        key={item.href}
+                        href={item.href}
+                        className="text-muted-foreground"
+                        onClick={() =>
+                          item.href.startsWith("/#")
+                            ? setOpen(false)
+                            : undefined
+                        }
+                      >
+                        {item.title}
+                      </a>
+                    )
+                )}
+              </div>
+            ) : null}
+
+            {sidebarNavItems?.length ? (
+              <div className="flex flex-col space-y-2">
+                {sidebarNavItems.map((item, index) => {
+                  const activeItems = item?.items?.filter(
+                    (subItem) => !subItem.disabled
+                  );
+
+                  if (!activeItems || activeItems.length === 0) return null;
+
+                  return (
+                    <div key={index} className="flex flex-col space-y-3 pt-6">
+                      <h4 className="font-medium">{item.title}</h4>
+                      {activeItems.map((subItem, idx) => (
+                        <React.Fragment key={subItem.href + idx}>
+                          {subItem.href ? (
+                            <a
+                              href={subItem.href}
+                              target={subItem?.external ? "_blank" : undefined}
+                              className="text-muted-foreground"
+                            >
+                              {subItem.title}
+                            </a>
+                          ) : (
+                            subItem.title
+                          )}
+                        </React.Fragment>
+                      ))}
+                    </div>
+                  );
+                })}
+              </div>
+            ) : null}
           </div>
         </ScrollArea>
       </SheetContent>

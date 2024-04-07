@@ -1,0 +1,37 @@
+---
+import SiteSection from "@/components/site-section.astro";
+import MainLayout from "./main-layout.astro";
+import { Toc } from "@/components/resources-toc";
+
+type Props = {
+  title: string;
+  description: string;
+  mainClass?: string;
+  items: any;
+};
+
+const { title, description, mainClass, items } = Astro.props;
+---
+
+<MainLayout
+  title={title}
+  description={description}
+  mainClass={mainClass}
+  items={items}
+>
+  <!-- Items -->
+  <section class="flex h-full mb-2">
+    <!-- Resources -->
+    <div class="flex flex-col w-full md:px-4 gap-4">
+      <SiteSection title={title} description={description} data={items} />
+    </div>
+
+    <!-- TOC -->
+    <aside
+      class="fixed mr-4 dark:bg-secondary/30 bg-secondary/60 h-fit p-4 rounded-xl top-20 w-1/5 z-30 -ml-2 hidden shrink-0 md:sticky md:block"
+    >
+      <p class="text-center font-bold">Table of Contents</p>
+      <Toc data={items} />
+    </aside>
+  </section>
+</MainLayout>

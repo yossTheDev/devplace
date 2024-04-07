@@ -3,16 +3,24 @@ import SiteGroup from "./site-group.astro";
 
 type Props = {
   title: string;
+  description: string;
   data: any;
 };
 
-const { title, data } = Astro.props;
+const { title, data, description } = Astro.props;
 ---
 
-<div class="flex flex-col gap-2">
-  <p id={title.replace(" ", "-")} class="text-3xl font-bold p-4">
+<div class="flex flex-col gap-1">
+  <h1
+    id={title.replace(" ", "-")}
+    class="md:text-3xl font-heading text-2xl mt-12 font-bold px-4"
+  >
     {title}
-  </p>
+  </h1>
+
+  <h2 class="px-4 md:text-sm dark:text-neutral-300 text-neutral-800">
+    {description}
+  </h2>
 
   {
     Object.entries(data).map((item, index) => (

@@ -1,39 +1,18 @@
-import cloud from "../../resources/cloud.json";
-import web from "../../resources/web.json";
+type Props = {
+  data: any;
+};
 
-export const Toc = () => {
+export const Toc: React.FC<Props> = ({ data }) => {
   return (
     <div className="flex size-full flex-col gap-2 ">
       <a
         href={"#Cloud"}
-        className="font-bold hover:cursor-pointer hover:underline"
+        className="font-bold hidden hover:cursor-pointer hover:underline"
       >
         Cloud
       </a>
       <div className="flex flex-col">
-        {Object.entries(cloud).map((item, index) => (
-          <>
-            <a
-              href={"#" + item[0].replace(" ", "-")}
-              className={`toc-item md:ml-3 hover:cursor-pointer hover:underline ${item[0].replace(
-                " ",
-                "-"
-              )}`}
-            >
-              {item[0]}
-            </a>
-          </>
-        ))}
-      </div>
-
-      <a
-        href={"#Cloud"}
-        className="font-bold hover:cursor-pointer hover:underline"
-      >
-        Web
-      </a>
-      <div className="flex flex-col">
-        {Object.entries(web).map((item, index) => (
+        {Object.entries(data).map((item, index) => (
           <>
             <a
               href={"#" + item[0].replace(" ", "-")}

@@ -1,11 +1,6 @@
 ---
 import ResourcesCounter from "@/components/resources-counter.astro";
-import { Toc } from "@/components/resources-toc";
-import SiteSection from "@/components/site-section.astro";
 import MainLayout from "@/layouts/main-layout.astro";
-
-import cloud from "../../resources/cloud.json";
-import web from "../../resources/web.json";
 ---
 
 <MainLayout mainClass="h-full" title="DevPlace - Free Developer Resources">
@@ -14,7 +9,7 @@ import web from "../../resources/web.json";
     class="hero animate-fade-in-up flex flex-col h-screen justify-center w-full items-center pb-12 pt-16 lg:py-28 px-8 text-center"
   >
     <h1
-      class="md:text-6xl text-5xl font-bold bg-gradient-to-b from-neutral-900 to-neutral-950 dark:from-neutral-300 dark:to-neutral-200 bg-clip-text text-transparent"
+      class="md:text-6xl font-heading text-5xl font-bold bg-gradient-to-br from-neutral-900 to-neutral-950 dark:from-neutral-300 dark:to-neutral-200 bg-clip-text text-transparent"
     >
       [DevPlace]
     </h1>
@@ -32,43 +27,10 @@ import web from "../../resources/web.json";
       class="flex ring-2 mx-auto mt-3 px-4 bg-blue-500 hover:bg-blue-500 transition-all hover:ring-4 hover:text-white text-white font-bold text-sm justify-center items-center w-fit rounded-full p-2"
       >Submit</a
     >
-
-    <div
-      class="bg-blue-500 hidden animate-bouncing animate-iteration-count-infinite shadow-xl dark:shadow-[#303552] shadow-blue-300 flex ring-2 mx-auto mt-12 px-4 animate-bounce ring-blue-300 text-white font-bold text-sm justify-center items-center w-fit rounded-full p-2"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="lucide lucide-arrow-down"
-        ><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg
-      >
-      <p>Let´s explore</p>
-    </div>
   </section>
 
   <!-- Items -->
   <section class="flex h-full mb-2">
-    <!-- Resources -->
-    <div class="flex flex-col w-full md:px-4 gap-4">
-      <SiteSection title="Cloud" data={cloud} />
-      <SiteSection title="Web" data={web} />
-    </div>
-
-    <!-- TOC -->
-    <aside
-      class="fixed mr-4 dark:bg-secondary/30 bg-secondary/60 h-fit p-4 rounded-xl top-20 w-1/5 z-30 -ml-2 hidden shrink-0 md:sticky md:block"
-    >
-      <p class="text-center font-bold">Table of Contents</p>
-      <Toc />
-    </aside>
-
     <style>
       .hero:is(.dark *) {
         background: url("../assets/img/ssspiral2.svg");
