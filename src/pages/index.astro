@@ -14,7 +14,7 @@ import MainLayout from "@/layouts/main-layout.astro";
     >
       [DevPlace]
     </h1>
-    <p class="md:text-xs md:w-80 text-neutral-400 text-xs">
+    <p class="md:text-sm md:w-96 text-neutral-500 text-xs">
       Your trusted hub for <span class="font-bold">Free</span> developer resources.
       Discover tutorials, documentation, code libraries, tools, and developer communities,
       all in one place.
@@ -58,7 +58,7 @@ import MainLayout from "@/layouts/main-layout.astro";
     <CategoryCard
       title="Cloud"
       description="Free Cloud Resources. Hosting, BaaS, Domains and More"
-      href="/web"
+      href="/cloud"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -81,27 +81,27 @@ import MainLayout from "@/layouts/main-layout.astro";
 
 <style>
   .hero:is(.dark *) {
-    background: url("../assets/img/ssspiral2.svg");
+    background: url("../assets/img/cccoil.svg");
     background-size: cover;
     background-repeat: no-repeat;
   }
 
   .hero {
-    background: url("../assets/img/ssspiral3.svg");
+    background: url("../assets/img/cccoil-light.svg");
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   @media (min-width: 768px) {
     .hero:is(.dark *) {
-      background: url("../assets/img/ssspiral2.svg");
+      background: url("../assets/img/cccoil.svg");
       background-repeat: no-repeat;
       background-size: 50%;
       background-position: 50%;
     }
 
     .hero {
-      background: url("../assets/img/ssspiral3.svg");
+      background: url("../assets/img/cccoil-light.svg");
       background-repeat: no-repeat;
       background-size: cover;
       background-size: 50%;
