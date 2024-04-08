@@ -83,7 +83,7 @@ if (_url.endsWith("/")) _url = _url.substring(0, _url.length - 1);
           alt={data.title! + " favicon image"}
           src={
             !data.favicon.startsWith("http")
-              ? `${url + "/" + data.favicon}`
+              ? `${url + data.favicon}`
               : data.favicon
           }
         />
