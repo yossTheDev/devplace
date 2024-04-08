@@ -24,6 +24,12 @@ export const navMenuConfig: NavMenuConfig = {
         },
 
         {
+          title: "Formation",
+          href: "/formation",
+          description: "Resources for Training as a Developer",
+        },
+
+        {
           title: "Web",
           href: "/web",
           description: "Free Resources for Web Developers. Icons, Templates, Design Systems and much more.",
