@@ -45,7 +45,7 @@ if (_url.endsWith("/")) _url = _url.substring(0, _url.length - 1);
           alt={data.title! + " landing image"}
           src={
             !data.ogImage?.startsWith("http")!
-              ? `${url + data.ogImage}`
+              ? `${url + "/" + data.ogImage}`
               : data.ogImage
           }
         />
