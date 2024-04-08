@@ -34,9 +34,7 @@
   "Testing": [
     "https://www.selenium.dev/",
     "https://www.cypress.io/",
-    "https://www.puppeteer.com/",
-    "https://www.testcafe.com/",
-    "https://www.webdriver.io/",
-    "https://www.playwright.dev/"
+    "https://pptr.dev/",
+    "https://playwright.dev/"
   ]
 }
