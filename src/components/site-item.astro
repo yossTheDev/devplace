@@ -44,8 +44,8 @@ if (_url.endsWith("/")) _url = _url.substring(0, _url.length - 1);
           height={150}
           alt={data.title! + " landing image"}
           src={
-            !data.ogImage?.startsWith("http")!
-              ? `${url + "/" + data.ogImage}`
+            data.ogImage?.startsWith("/")!
+              ? `${url + data.ogImage}`
               : data.ogImage
           }
         />
@@ -82,8 +82,8 @@ if (_url.endsWith("/")) _url = _url.substring(0, _url.length - 1);
           loading="lazy"
           alt={data.title! + " favicon image"}
           src={
-            data.favicon.startsWith("/")
-              ? `${url + data.favicon}`
+            !data.favicon.startsWith("http")
+              ? `${url + "/" + data.favicon}`
               : data.favicon
           }
         />
