@@ -8,6 +8,9 @@ type Props = {
 };
 
 const { title, data, description } = Astro.props;
+
+let count = 0;
+Object.entries(data).map((item: any) => (count += item[1].length));
 ---
 
 <div class="flex flex-col gap-1">
@@ -21,6 +24,10 @@ const { title, data, description } = Astro.props;
   <h2 class="px-4 md:text-sm dark:text-neutral-300 text-neutral-800">
     {description}
   </h2>
+
+  <p class="px-4 md:text-sm dark:text-neutral-300 text-neutral-800">
+    Items in Category: {count}
+  </p>
 
   {
     Object.entries(data).map((item, index) => (
