@@ -12,6 +12,12 @@ export const navMenuConfig: NavMenuConfig = {
         },
 
         {
+          title: "Design",
+          href: "/design",
+          description: "Free resources for designers and developers. Fonts, Illustrations, Colors, Icons and More",
+        },
+
+        {
           title: "Dev",
           href: "/dev",
           description: "Free resources for developers of all kinds. APIs, CI/CD, QA, Testing and More",

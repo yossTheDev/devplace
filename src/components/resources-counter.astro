@@ -2,12 +2,14 @@
 import cloud from "../../resources/cloud.json";
 import web from "../../resources/web.json";
 import dev from "../../resources/web.json";
+import design from "../../resources/design.json";
 
 let count = 0;
 
 Object.entries(cloud).map((item) => (count += item[1].length));
 Object.entries(web).map((item) => (count += item[1].length));
 Object.entries(dev).map((item) => (count += item[1].length));
+Object.entries(design).map((item) => (count += item[1].length));
 ---
 
 <div class="flex p-2 px-4 mt-4 border-2 rounded-full bg-background">
