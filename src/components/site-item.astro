@@ -28,16 +28,6 @@ try {
 
 let _url = url.replace("https://", "").replace("http://", "");
 if (_url.endsWith("/")) _url = _url.substring(0, _url.length - 1);
-
-let ogImage = data.ogImage;
-if (ogImage) {
-  if (ogImage.startsWith("/")) ogImage = url + data.ogImage;
-}
-
-let favIcon = data.favicon;
-if (favIcon) {
-  if (favIcon.startsWith("/")) favIcon = url + data.favicon;
-}
 ---
 
 <a
@@ -53,7 +43,11 @@ if (favIcon) {
           width={300}
           height={150}
           alt={data.title! + " landing image"}
-          src={ogImage!}
+          src={
+            data.ogImage?.startsWith("/")!
+              ? `${url + data.ogImage}`
+              : data.ogImage
+          }
         />
       ) : (
         <div class="max-h-16 flex items-center justify-center min-w-24 w-28 h-16 dark:bg-neutral-900 bg-neutral-200 dark:text-neutral-700 text-neutral-500 self-center rounded">
