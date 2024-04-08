@@ -6,16 +6,22 @@ export const navMenuConfig: NavMenuConfig = {
       title: "Categories",
       items: [
         {
-          title: "Web",
-          href: "/web",
-          description: "Free Resources for Web Developers. Icons, Templates, Design Systems and much more.",
-        },
-        {
           title: "Cloud",
           href: "/cloud",
           description: "Free Cloud Resources. Hosting, BaaS, Domains and More",
         },
 
+        {
+          title: "Dev",
+          href: "/dev",
+          description: "Free resources for developers of all kinds. APIs, CI/CD, QA, Testing and More",
+        },
+
+        {
+          title: "Web",
+          href: "/web",
+          description: "Free Resources for Web Developers. Icons, Templates, Design Systems and much more.",
+        }
       ],
     },
   ],

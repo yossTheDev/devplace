@@ -34,28 +34,6 @@ import MainLayout from "@/layouts/main-layout.astro";
   <p class="font-heading py-4 px-6 text-2xl">Categories</p>
   <section class="flex gap-2 h-full mb-2 flex-wrap justify-stretch p-4">
     <CategoryCard
-      title="Web"
-      description="Free Resources for Web Developers. Icons, Templates, Design Systems and More."
-      href="/web"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="48"
-        height="48"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="lucide lucide-globe"
-        ><circle cx="12" cy="12" r="10"></circle><path
-          d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path
-          d="M2 12h20"></path></svg
-      >
-    </CategoryCard>
-
-    <CategoryCard
       title="Cloud"
       description="Free Cloud Resources. Hosting, BaaS, Domains and More"
       href="/cloud"
@@ -74,6 +52,49 @@ import MainLayout from "@/layouts/main-layout.astro";
         ><path d="M17.5 21H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"
         ></path><path d="M22 10a3 3 0 0 0-3-3h-2.207a5.502 5.502 0 0 0-10.702.5"
         ></path></svg
+      >
+    </CategoryCard>
+
+    <CategoryCard
+      title="Dev"
+      description="Free resources for developers of all kinds. APIs, CI/CD, QA, Testing and More"
+      href="/dev"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="48"
+        height="48"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-code"
+        ><polyline points="16 18 22 12 16 6"></polyline><polyline
+          points="8 6 2 12 8 18"></polyline></svg
+      >
+    </CategoryCard>
+
+    <CategoryCard
+      title="Web"
+      description="Free Resources for Web Developers. Icons, Templates, Design Systems and More"
+      href="/web"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="48"
+        height="48"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-globe"
+        ><circle cx="12" cy="12" r="10"></circle><path
+          d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path
+          d="M2 12h20"></path></svg
       >
     </CategoryCard>
   </section>

@@ -11,7 +11,18 @@ const { url } = Astro.props;
 let data;
 
 try {
-  data = await getMetaTags(url);
+  if (!import.meta.env.DEV) data = await getMetaTags(url);
+  data = {
+    title: "",
+    description: "",
+    keywords: "",
+    author: "",
+    favicon: "",
+    ogTitle: "",
+    ogDescription: "",
+    ogImage: "",
+    ogUrl: "",
+  };
 } catch (err) {
   data = {
     title: "",

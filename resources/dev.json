@@ -1,0 +1,42 @@
+{
+  "APIs": [
+    "https://publicapis.dev/",
+    "https://fakestoreapi.com/",
+    "https://rapidapi.com/",
+    "https://www.postman.com/",
+    "https://www.apigee.com/",
+    "https://www.apimatic.io/"
+  ],
+  "CI/CD": [
+    "https://www.jenkins.io/",
+    "https://circleci.com/",
+    "https://travis-ci.com/",
+    "https://github.com/features/actions",
+    "https://www.gitlab.com/",
+    "https://www.codeship.com/"
+  ],
+  "QA": [
+    "https://www.testim.io/",
+    "https://www.mabl.com/",
+    "https://www.rainforestqa.com/",
+    "https://www.testlio.com/",
+    "https://www.utest.com/",
+    "https://www.browserstack.com/"
+  ],
+  "Search": [
+    "https://www.algolia.com/",
+    "https://www.elastic.co/",
+    "https://www.elasticsearch.org/",
+    "https://www.solr.apache.org/",
+    "https://www.elasticsearch-cloud.com/",
+    "https://www.searchly.com/"
+  ],
+  "Testing": [
+    "https://www.selenium.dev/",
+    "https://www.cypress.io/",
+    "https://www.puppeteer.com/",
+    "https://www.testcafe.com/",
+    "https://www.webdriver.io/",
+    "https://www.playwright.dev/"
+  ]
+}
