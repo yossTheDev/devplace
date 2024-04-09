@@ -26,11 +26,7 @@ export const SheetToc: React.FC<Props> = ({ items }) => {
       <SheetContent side="left" className="pr-0">
         <p className="font-bold">Table Of Contents</p>
         <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-2">
-          <div className="mt-2 mb-20">
-            <div className="flex flex-col space-y-3">
-              <Toc data={items}></Toc>
-            </div>
-          </div>
+          <Toc data={items}></Toc>
         </ScrollArea>
       </SheetContent>
     </Sheet>

@@ -45,7 +45,7 @@ const { title, description, mainClass, items } = Astro.props;
       client:load
     />
     <!-- Sheet Mobile TOC -->
-    {items && <SheetToc client:load slot="navigation-toc" items={items} />}
+    <SheetToc client:load slot="navigation-toc" items={items} />
 
     <div class="flex items-center gap-x-4" slot="right-header">
       <a

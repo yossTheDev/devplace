@@ -88,15 +88,6 @@ const { className } = Astro.props;
   <script>
     const header = document.getElementById("header");
 
-    /* Auto Hide Scroll Bar */
-    window?.addEventListener("scroll", () => {
-      if (window.scrollY > 150) {
-        header?.classList.remove("border-transparent");
-      } else {
-        header?.classList.add("border-transparent");
-      }
-    });
-
     /* Update Toc Items */
     window?.addEventListener("scroll", () => {
       let current: string | null;
