@@ -1,7 +1,15 @@
 ---
 import { CategoryCard } from "@/components/cards/category-card";
 import ResourcesCounter from "@/components/resources-counter.astro";
+import { Toc } from "@/components/resources-toc";
+import SiteSection from "@/components/site-section.astro";
 import MainLayout from "@/layouts/main-layout.astro";
+
+import cloud from "../../resources/cloud.json";
+import design from "../../resources/design.json";
+import dev from "../../resources/dev.json";
+import formation from "../../resources/formation.json";
+import web from "../../resources/web.json";
 ---
 
 <MainLayout mainClass="h-full" title="DevPlace - Free Developer Resources">
@@ -28,6 +36,8 @@ import MainLayout from "@/layouts/main-layout.astro";
       class="flex ring-2 mx-auto mt-3 px-4 bg-blue-500 hover:bg-blue-500 transition-all hover:ring-4 hover:text-white text-white font-bold text-sm justify-center items-center w-fit rounded-full p-2"
       >Submit</a
     >
+
+    <a href="#explore">Explore</a>
   </section>
 
   <!-- Categories -->
@@ -147,6 +157,65 @@ import MainLayout from "@/layouts/main-layout.astro";
       >
     </CategoryCard>
   </section>
+
+  <!-- All Items  -->
+  <>
+    <p id="explore" class="font-heading py-4 px-6 text-2xl">Explore</p>
+
+    <div class="flex w-full mb-4">
+      <div class="flex flex-col w-full px-2 mt-4 gap-4">
+        <SiteSection
+          title={"Cloud"}
+          description={"Free Cloud Resources. Hosting, BaaS, Domains and More"}
+          data={cloud}
+          isMainPage
+        />
+
+        <SiteSection
+          title={"Design"}
+          description={"Free resources for designers and developers. Fonts, Illustrations, Colors, Icons and More"}
+          data={design}
+          isMainPage
+        />
+
+        <SiteSection
+          title={"Dev"}
+          description={"Free resources for developers of all kinds. APIs, CI/CD, QA, Testing and More"}
+          data={dev}
+          isMainPage
+        />
+
+        <SiteSection
+          title={"Formation"}
+          description={"Resources for Training as a Developer"}
+          data={formation}
+          isMainPage
+        />
+
+        <SiteSection
+          title={"Web"}
+          description={"Free Resources for Web Developers. Icons, Templates, Design Systems and More."}
+          data={web}
+          isMainPage
+        />
+      </div>
+
+      <aside
+        class="fixed mr-4 dark:bg-secondary/30 bg-secondary/60 h-fit p-4 rounded-xl top-20 w-1/5 z-30 -ml-2 hidden shrink-0 md:sticky md:block"
+      >
+        <p class="text-center font-bold">Table of Contents</p>
+        <Toc
+          data={[
+            { title: "Cloud", items: { ...cloud } },
+            { title: "Design", items: { ...design } },
+            { title: "Dev", items: { ...dev } },
+            { title: "Formation", items: { ...formation } },
+            { title: "Web", items: { ...web } },
+          ]}
+        />
+      </aside>
+    </div>
+  </>
 </MainLayout>
 
 <style>

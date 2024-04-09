@@ -1,30 +1,42 @@
+type Data = {
+  title: string;
+  items: any;
+};
+
 type Props = {
-  data: any;
+  data: Data[];
 };
 
 export const Toc: React.FC<Props> = ({ data }) => {
   return (
-    <div className="flex size-full flex-col gap-2 ">
-      <a
-        href={"#Cloud"}
-        className="font-bold hidden hover:cursor-pointer hover:underline"
-      >
-        Cloud
-      </a>
+    <div
+      id="toc-container"
+      className="flex w-full max-h-96 overflow-auto flex-col gap-2 "
+    >
       <div className="flex flex-col">
-        {Object.entries(data).map((item, index) => (
-          <>
-            <a
-              href={"#" + item[0].replace(" ", "-")}
-              className={`toc-item md:ml-3 hover:cursor-pointer hover:underline ${item[0].replace(
-                " ",
-                "-"
-              )}`}
-            >
-              {item[0]}
-            </a>
-          </>
-        ))}
+        <>
+          {data.map((items) => (
+            <>
+              <p
+                className={`toc-item font-bold hover:cursor-pointer hover:underline`}
+              >
+                {items.title}
+              </p>
+              {Object.entries(items.items).map((item, index) => (
+                <>
+                  <p
+                    className={`toc-item md:ml-3 hover:cursor-pointer hover:underline ${item[0].replace(
+                      " ",
+                      "-"
+                    )}`}
+                  >
+                    {item[0]}
+                  </p>
+                </>
+              ))}
+            </>
+          ))}
+        </>
       </div>
     </div>
   );

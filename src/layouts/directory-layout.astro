@@ -22,16 +22,14 @@ const { title, description, mainClass, items } = Astro.props;
   <!-- Items -->
   <section class="flex h-full mb-2">
     <!-- Resources -->
-    <div class="flex flex-col w-full md:px-4 gap-4">
-      <SiteSection title={title} description={description} data={items} />
-    </div>
+    <SiteSection title={title} description={description} data={items} />
 
     <!-- TOC -->
     <aside
       class="fixed mr-4 dark:bg-secondary/30 bg-secondary/60 h-fit p-4 rounded-xl top-20 w-1/5 z-30 -ml-2 hidden shrink-0 md:sticky md:block"
     >
       <p class="text-center font-bold">Table of Contents</p>
-      <Toc data={items} />
+      <Toc data={[{ title: title, items: { ...items } }]} />
     </aside>
   </section>
 </MainLayout>

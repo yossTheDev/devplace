@@ -5,25 +5,46 @@ type Props = {
   title: string;
   description: string;
   data: any;
+  isMainPage?: boolean;
 };
 
-const { title, data, description } = Astro.props;
+const { title, data, description, isMainPage = false } = Astro.props;
 
 let count = 0;
 Object.entries(data).map((item: any) => (count += item[1].length));
 ---
 
-<div class="flex flex-col gap-1">
-  <h1
-    id={title.replace(" ", "-")}
-    class="md:text-3xl font-heading text-2xl mt-12 font-bold px-4"
-  >
-    {title}
-  </h1>
+<div
+  class={`flex flex-col w-full gap-1 ${"section-" + title.replace(" ", "-")}`}
+>
+  {
+    !isMainPage ? (
+      <>
+        <h1
+          id={title.replace(" ", "-")}
+          class={`md:text-3xl mt-12 font-heading text-2xl font-bold px-4 item-section `}
+        >
+          {title}
+        </h1>
 
-  <h2 class="px-4 md:text-sm dark:text-neutral-300 text-neutral-800">
-    {description}
-  </h2>
+        <h2 class="px-4 md:text-sm dark:text-neutral-300 text-neutral-800">
+          {description}
+        </h2>
+      </>
+    ) : (
+      <>
+        <h3
+          id={title.replace(" ", "-")}
+          class={`md:text-3xl font-heading text-2xl font-bold px-4 item-section`}
+        >
+          {title}
+        </h3>
+        <h4 class="px-4 md:text-sm dark:text-neutral-300 text-neutral-800">
+          {description}
+        </h4>
+      </>
+    )
+  }
 
   <p class="px-4 md:text-sm dark:text-neutral-300 text-neutral-800">
     Items in Category: {count}

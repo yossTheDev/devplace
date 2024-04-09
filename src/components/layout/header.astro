@@ -100,6 +100,7 @@ const { className } = Astro.props;
     /* Update Toc Items */
     window?.addEventListener("scroll", () => {
       let current: string | null;
+      const tocContainer = document.getElementById("toc-container");
 
       const sections = document.querySelectorAll(
         ".items-section"
@@ -114,9 +115,29 @@ const { className } = Astro.props;
       });
 
       tocItems.forEach((li) => {
+        li.addEventListener("click", () => {
+          console.log("CLICKs");
+
+          const section = document.querySelector(
+            `${".section-" + li.innerHTML.replace(" ", "-")}`
+          );
+
+          console.log(section);
+
+          section?.scrollIntoView();
+          window.scrollTo({
+            top: (section as HTMLDivElement).offsetTop - 60,
+          });
+        });
+      });
+
+      tocItems.forEach((li) => {
         li.classList.remove("underline");
         if (current && li.classList.contains(current)) {
           li.classList.add("underline");
+          tocContainer?.scrollTo({
+            top: (li as HTMLDivElement).offsetTop - 60,
+          });
         }
       });
     });
