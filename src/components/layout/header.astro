@@ -116,15 +116,10 @@ const { className } = Astro.props;
 
       tocItems.forEach((li) => {
         li.addEventListener("click", () => {
-          console.log("CLICKs");
-
           const section = document.querySelector(
             `${".section-" + li.innerHTML.replace(" ", "-")}`
           );
 
-          console.log(section);
-
-          section?.scrollIntoView();
           window.scrollTo({
             top: (section as HTMLDivElement).offsetTop - 60,
           });
