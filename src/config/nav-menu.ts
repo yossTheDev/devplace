@@ -7,31 +7,31 @@ export const navMenuConfig: NavMenuConfig = {
       items: [
         {
           title: "Cloud",
-          href: "/cloud",
+          href: "/category/cloud",
           description: "Free Cloud Resources. Hosting, BaaS, Domains and More",
         },
 
         {
           title: "Design",
-          href: "/design",
+          href: "/category/design",
           description: "Free resources for designers and developers. Fonts, Illustrations, Colors, Icons and More",
         },
 
         {
           title: "Dev",
-          href: "/dev",
+          href: "/category/dev",
           description: "Free resources for developers of all kinds. APIs, CI/CD, QA, Testing and More",
         },
 
         {
           title: "Formation",
-          href: "/formation",
+          href: "/category/formation",
           description: "Resources for Training as a Developer",
         },
 
         {
           title: "Web",
-          href: "/web",
+          href: "/category/web",
           description: "Free Resources for Web Developers. Icons, Templates, Design Systems and much more.",
         }
       ],
